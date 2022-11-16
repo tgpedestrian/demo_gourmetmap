@@ -22,9 +22,10 @@ public class GourmetMapController {
 	@PostMapping(value = "/api/add_gourmet_map")
 	public GourmetMapRes addGourmetMap(@RequestBody GourmetMapReq req) {
 
-		if (!StringUtils.hasText(req.getName())) {
+		if (!StringUtils.hasText(req.getName())) {    //如果裡面的值是一樣的
 			return new GourmetMapRes(GourmetMapRtnCode.NAME_REQUIRED.getMessage());
-		} else if (!StringUtils.hasText(req.getCity())) {
+		}
+		if (!StringUtils.hasText(req.getCity())) {    //判斷 如果裡面的值是一樣的
 			return new GourmetMapRes(GourmetMapRtnCode.CITY_REQUIRED.getMessage());
 		}
 
@@ -42,17 +43,21 @@ public class GourmetMapController {
 
 		if (!StringUtils.hasText(req.getName())) {
 			return new GourmetMapRes(GourmetMapRtnCode.NAME_REQUIRED.getMessage());
-		} else if (!StringUtils.hasText(req.getCity())) {
+		}
+		if (!StringUtils.hasText(req.getCity())) {
 			return new GourmetMapRes(GourmetMapRtnCode.CITY_REQUIRED.getMessage());
 		}
 
 		GourmetMap gourmetMap = gourmetMapService.changGourmetMap(req.getCity(), req.getName());
-		if(gourmetMap == null) {
+		
+		if(gourmetMap == null) {              //city 為 ㄙㄧㄠ
 			return new GourmetMapRes(GourmetMapRtnCode.CITY_EXISTED.getMessage());
 		}
+		
 		GourmetMapRes res = new GourmetMapRes();
 		res.setMessage(GourmetMapRtnCode.SUCCESSFUL.getMessage());
 		res.setGourmetMap(gourmetMap);
+		
 		return new GourmetMapRes(res);
 
 	}
@@ -81,8 +86,8 @@ public class GourmetMapController {
 		 if(nameFood == null) {
 			 return new GourmetMapRes(GourmetMapRtnCode.FAILED.getMessage());
 		 }
+		 
 		return new GourmetMapRes(nameFood , GourmetMapRtnCode.SUCCESSFUL.getMessage());
-
 	}
 
 	// 第二題 --> 修改 (店家評價)
@@ -143,10 +148,10 @@ public class GourmetMapController {
 		}
 
 		GourmetMapRes res = gourmetMapService.nameCommentNumber(req.getNameComment());
+		
 		if(res == null) {
 			 return new GourmetMapRes(GourmetMapRtnCode.FAILED.getMessage());
 		 }
-
 
 		return new GourmetMapRes(res);
 

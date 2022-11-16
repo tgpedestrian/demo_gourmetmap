@@ -15,7 +15,7 @@ public interface GourmetMapService {
 	public GourmetMap changGourmetMap(String city, String name);
 	
 	// 第二題 --> 新增 (城市,店名,餐點評價)
-	public NameFood addNameFood(String name,String food,int price,int foodComment);
+	public NameFood addNameFood(String name, String food, int price, int foodComment);
 	
 	// 第二題 --> 修改 (店家評價)
 	public GourmetMapRes changeNameComment(String name, String food, int price, int foodComment);

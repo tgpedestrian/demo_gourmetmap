@@ -25,18 +25,18 @@ public class GourmetMapRes {
 
 	private List<NameFood> nameFoodList;
 
-	private List<String> strList;
+//	private List<String> strList;
 
-	List<GourmetMapForFrontEnd> gourmetMapForFrontEnd;
+	private List<GourmetMapForFrontEnd> gourmetMapForFrontEnd;
 
 	public GourmetMapRes() {
 
 	}
 
-	public GourmetMapRes(List<String> strList, String message) {
-		this.strList = strList;
-		this.message = message;
-	}
+//	public GourmetMapRes(List<String> strList, String message) {
+//		this.strList = strList;
+//		this.message = message;
+//	}
 
 	public GourmetMapRes(NameFood nameFood, String message) {
 		this.message = message;
@@ -96,13 +96,13 @@ public class GourmetMapRes {
 		this.string = string;
 	}
 
-	public List<String> getStrList() {
-		return strList;
-	}
-
-	public void setStrList(List<String> strList) {
-		this.strList = strList;
-	}
+//	public List<String> getStrList() {
+//		return strList;
+//	}
+//
+//	public void setStrList(List<String> strList) {
+//		this.strList = strList;
+//	}
 
 	public List<NameFood> getNameFoodList() {
 		return nameFoodList;

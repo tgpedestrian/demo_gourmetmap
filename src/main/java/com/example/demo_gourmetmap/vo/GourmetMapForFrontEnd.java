@@ -7,27 +7,34 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class GourmetMapForFrontEnd {
-	private String city;
 
-	private String name;
+	private String city;   //城市
 
-	private double nameComment;
+	private String name;   //店名
 
-	private String food;
+	private double nameComment;  //店家評價
 
-	private Integer price;
+	private String food;   //食物
 
-	private Integer foodComment;
+	private Integer price; //價錢
 
-	private NameFood namefood;
-	
-	private List<NameFood> listnamefood;
+	private Integer foodComment; //食物評價
+
+	private NameFood namefood;   //namefood
+
+	private List<NameFood> listnamefood;  //List的NameFood
 
 	public GourmetMapForFrontEnd() {
 
 	}
 
-	public GourmetMapForFrontEnd(String name, double nameComment, String city, List<NameFood> listnamefood) {
+	public GourmetMapForFrontEnd(String name, double nameComment, List<NameFood> listnamefood) {
+		this.name = name;
+		this.nameComment = nameComment;
+		this.listnamefood = listnamefood;
+	}
+
+	public GourmetMapForFrontEnd(String city, String name, double nameComment, List<NameFood> listnamefood) {
 		this.city = city;
 		this.name = name;
 		this.nameComment = nameComment;
