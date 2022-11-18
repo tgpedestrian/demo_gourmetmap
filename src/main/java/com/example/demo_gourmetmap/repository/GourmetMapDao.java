@@ -26,9 +26,9 @@ public interface GourmetMapDao extends JpaRepository<GourmetMap, String> {
 	 */
 	
 	
-	public List<GourmetMap> findAllByNameComment(double nameComment);
-	/**
-	 * 第五題 --> 找出店家評價
-	 */
+//	public List<GourmetMap> findAllByNameComment(double nameComment);
+//	/**
+//	 * 第五題 --> 找出店家評價
+//	 */
 
 }

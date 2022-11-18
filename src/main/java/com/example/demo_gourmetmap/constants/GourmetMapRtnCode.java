@@ -20,7 +20,9 @@ public enum GourmetMapRtnCode {
 
 	LIMIT_REQURED("400", "limit is required"),
 
-	NAME_EXISTED("403", "name is not existed"),
+	NAME_NOT_EXISTED("403", "name is not existed"),
+	
+	NAME_EXISTED("403", "name is existed"),
 	
 	CITY_EXISTED("403", "city is not existed");
 

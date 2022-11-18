@@ -33,16 +33,17 @@ public interface NameGourmetFoodDao extends JpaRepository<NameFood, NameGourmetM
 	 * @return
 	 */
 	
-    public List<NameFood> findAllByFoodComment(int foodcomment);
+	public List<NameFood> findByNameInAndFoodCommentGreaterThanEqualOrderByFoodCommentDesc(List<String> nameList,
+			int foodcomment);
 	/**
-	 * 第五題 --> 找出餐點評價
+	 *第五題 --> 搜尋 第二張表單的名子 in 食物評價大於等於並且依序    在List裡面用 In
 	 */
 	
-//	// 第五題 --> 搜尋 第二張表單的名子 in 食物評價大於等於並且依序    在List裡面用 In
-//	public List<NameFood> findByNameInAndFoodCommentGreaterThanEqualOrderByFoodCommentDesc(List<String> nameList,
-//			int foodcomment);
 	
-	
+//    public List<NameFood> findAllByFoodComment(int foodcomment);
+//	/**
+//	 * 第五題 --> 找出餐點評價
+//	 */
 	
 	
 

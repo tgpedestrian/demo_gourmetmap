@@ -9,6 +9,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class GourmetMapRes {
 
+	private String name;
+
+	private String city;
+
+	private Integer nameComment;
+
 	private NameFood nameFood;
 
 	private String message;
@@ -16,6 +22,8 @@ public class GourmetMapRes {
 	private GourmetMapRes reg;
 
 	private GourmetMap gourmetMap;
+
+	private GourmetMapRes res;
 
 	private String string;
 
@@ -29,14 +37,22 @@ public class GourmetMapRes {
 
 	private List<GourmetMapForFrontEnd> gourmetMapForFrontEnd;
 
-	public GourmetMapRes() {
-
+	public GourmetMapRes(GourmetMapRes res, String message) {
+		this.res = res;
+		this.message = message;
 	}
 
 //	public GourmetMapRes(List<String> strList, String message) {
 //		this.strList = strList;
 //		this.message = message;
 //	}
+	public GourmetMapRes() {
+
+	}
+
+	public GourmetMapRes(GourmetMap gourmetMap) {
+		this.gourmetMap = gourmetMap;
+	}
 
 	public GourmetMapRes(NameFood nameFood, String message) {
 		this.message = message;
@@ -134,6 +150,38 @@ public class GourmetMapRes {
 
 	public void setGourmetMapList(List<GourmetMap> gourmetMapList) {
 		this.gourmetMapList = gourmetMapList;
+	}
+
+	public GourmetMapRes getRes() {
+		return res;
+	}
+
+	public void setRes(GourmetMapRes res) {
+		this.res = res;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public Integer getNameComment() {
+		return nameComment;
+	}
+
+	public void setNameComment(Integer nameComment) {
+		this.nameComment = nameComment;
 	}
 
 }

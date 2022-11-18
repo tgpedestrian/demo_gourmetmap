@@ -1,7 +1,5 @@
 package com.example.demo_gourmetmap.service.ifs;
 
-import com.example.demo_gourmetmap.entity.GourmetMap;
-import com.example.demo_gourmetmap.entity.NameFood;
 import com.example.demo_gourmetmap.vo.GourmetMapRes;
 
 public interface GourmetMapService {
@@ -9,13 +7,13 @@ public interface GourmetMapService {
 	// 題目 : 美食地圖
 
 	// 第一題 --> 新增 (城市,店名,店家評價)
-	public GourmetMap addGourmetMap(String city, String name);
+	public GourmetMapRes addGourmetMap(String city, String name);
 
 	// 第一題 --> 更改 (城市)
-	public GourmetMap changGourmetMap(String city, String name);
+	public GourmetMapRes changGourmetMap(String city, String name);
 	
 	// 第二題 --> 新增 (城市,店名,餐點評價)
-	public NameFood addNameFood(String name, String food, int price, int foodComment);
+	public GourmetMapRes addNameFood(String name, String food, int price, int foodComment);
 	
 	// 第二題 --> 修改 (店家評價)
 	public GourmetMapRes changeNameComment(String name, String food, int price, int foodComment);

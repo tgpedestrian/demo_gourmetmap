@@ -28,17 +28,17 @@ public class GourmetMapForFrontEnd {
 
 	}
 
-	public GourmetMapForFrontEnd(String name, double nameComment, List<NameFood> listnamefood) {
+	public GourmetMapForFrontEnd(String name, double nameComment, NameFood namefood) {
 		this.name = name;
 		this.nameComment = nameComment;
-		this.listnamefood = listnamefood;
+		this.namefood = namefood;
 	}
 
-	public GourmetMapForFrontEnd(String city, String name, double nameComment, List<NameFood> listnamefood) {
+	public GourmetMapForFrontEnd(String city, String name, double nameComment, NameFood namefood) {
 		this.city = city;
 		this.name = name;
 		this.nameComment = nameComment;
-		this.listnamefood = listnamefood;
+		this.namefood = namefood;
 	}
 
 	public String getCity() {
