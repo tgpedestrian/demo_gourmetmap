@@ -2,43 +2,51 @@ package com.example.demo_gourmetmap.vo;
 
 import java.util.List;
 
-import com.example.demo_gourmetmap.entity.NameFood;
+import com.example.demo_gourmetmap.entity.Meal;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class GourmetMapForFrontEnd {
 
-	private String city;   //城市
+	// 城市
+	private String city;
+    
+	// 店名
+	private String storeName; 
 
-	private String name;   //店名
+	// 店家評價
+	private double storeComment; 
 
-	private double nameComment;  //店家評價
+	// 食物
+	private String food; 
 
-	private String food;   //食物
+	// 價錢
+	private Integer price; 
 
-	private Integer price; //價錢
+	// 食物評價
+	private Integer mealComment; 
 
-	private Integer foodComment; //食物評價
+	// meal
+	private Meal meal; 
 
-	private NameFood namefood;   //namefood
-
-	private List<NameFood> listnamefood;  //List的NameFood
+	// List的meal
+	private List<Meal> mealList; 
 
 	public GourmetMapForFrontEnd() {
 
 	}
 
-	public GourmetMapForFrontEnd(String name, double nameComment, NameFood namefood) {
-		this.name = name;
-		this.nameComment = nameComment;
-		this.namefood = namefood;
+	public GourmetMapForFrontEnd(String storeName, double storeComment, Meal meal) {
+		this.storeName = storeName;
+		this.storeComment = storeComment;
+		this.meal = meal;
 	}
 
-	public GourmetMapForFrontEnd(String city, String name, double nameComment, NameFood namefood) {
+	public GourmetMapForFrontEnd(String city, String storeName, double storeComment, Meal meal) {
 		this.city = city;
-		this.name = name;
-		this.nameComment = nameComment;
-		this.namefood = namefood;
+		this.storeName = storeName;
+		this.storeComment = storeComment;
+		this.meal = meal;
 	}
 
 	public String getCity() {
@@ -49,20 +57,20 @@ public class GourmetMapForFrontEnd {
 		this.city = city;
 	}
 
-	public String getName() {
-		return name;
+	public String getStoreName() {
+		return storeName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setStoreName(String storeName) {
+		this.storeName = storeName;
 	}
 
-	public double getNameComment() {
-		return nameComment;
+	public double getStoreComment() {
+		return storeComment;
 	}
 
-	public void setNameComment(double nameComment) {
-		this.nameComment = nameComment;
+	public void setStoreComment(double storeComment) {
+		this.storeComment = storeComment;
 	}
 
 	public String getFood() {
@@ -81,28 +89,28 @@ public class GourmetMapForFrontEnd {
 		this.price = price;
 	}
 
-	public Integer getFoodComment() {
-		return foodComment;
+	public Integer getMealComment() {
+		return mealComment;
 	}
 
-	public void setFoodComment(Integer foodComment) {
-		this.foodComment = foodComment;
+	public void setMealComment(Integer mealComment) {
+		this.mealComment = mealComment;
 	}
 
-	public List<NameFood> getListnamefood() {
-		return listnamefood;
+	public Meal getMeal() {
+		return meal;
 	}
 
-	public void setListnamefood(List<NameFood> listnamefood) {
-		this.listnamefood = listnamefood;
+	public void setMeal(Meal meal) {
+		this.meal = meal;
 	}
 
-	public NameFood getNamefood() {
-		return namefood;
+	public List<Meal> getMealList() {
+		return mealList;
 	}
 
-	public void setNamefood(NameFood namefood) {
-		this.namefood = namefood;
+	public void setMealList(List<Meal> mealList) {
+		this.mealList = mealList;
 	}
 
 }

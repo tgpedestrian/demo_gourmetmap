@@ -2,62 +2,69 @@ package com.example.demo_gourmetmap.vo;
 
 public class GourmetMapReq {
 
-	private String name;
+	//店家店名
+	private String storeName;
 
-	private String food;
+	//餐點
+	private String mealFood;
 
-	private String city;
+	//店家店名
+	private String mealName;
 
+	//店家城市
+	private String storeCity;
+
+	//限制比數
 	private int limit;
 
-	private int price;
+	//餐點價錢
+	private int mealPrice;
 
-	private int foodComment;
+	//餐點評價
+	private int mealComment;
 
-	private double nameComment;
+	//店家評價
+	private double storeComment;
 
 	public GourmetMapReq() {
 
 	}
 
-	public String getName() {
-		return name;
+	public GourmetMapReq(String storeName, String storeCity) {
+		this.storeName = storeName;
+		this.storeCity = storeCity;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public String getStoreName() {
+		return storeName;
 	}
 
-	public String getFood() {
-		return food;
+	public void setStoreName(String storeName) {
+		this.storeName = storeName;
 	}
 
-	public void setFood(String food) {
-		this.food = food;
+	public String getMealFood() {
+		return mealFood;
 	}
 
-	public int getPrice() {
-		return price;
+	public void setMealFood(String mealFood) {
+		this.mealFood = mealFood;
 	}
 
-	public void setPrice(int price) {
-		this.price = price;
+	public String getMealName() {
+		return mealName;
 	}
 
-	public int getFoodComment() {
-		return foodComment;
+	public void setMealName(String mealName) {
+		this.mealName = mealName;
 	}
 
-	public void setFoodComment(int foodComment) {
-		this.foodComment = foodComment;
+	public String getStoreCity() {
+		return storeCity;
 	}
 
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
+	public void setStoreCity(String storeCity) {
+		this.storeCity = storeCity;
 	}
 
 	public int getLimit() {
@@ -68,12 +75,28 @@ public class GourmetMapReq {
 		this.limit = limit;
 	}
 
-	public double getNameComment() {
-		return nameComment;
+	public int getMealPrice() {
+		return mealPrice;
 	}
 
-	public void setNameComment(double nameComment) {
-		this.nameComment = nameComment;
+	public void setMealPrice(int mealPrice) {
+		this.mealPrice = mealPrice;
+	}
+
+	public int getMealComment() {
+		return mealComment;
+	}
+
+	public void setMealComment(int mealComment) {
+		this.mealComment = mealComment;
+	}
+
+	public double getStoreComment() {
+		return storeComment;
+	}
+
+	public void setStoreComment(double storeComment) {
+		this.storeComment = storeComment;
 	}
 
 }

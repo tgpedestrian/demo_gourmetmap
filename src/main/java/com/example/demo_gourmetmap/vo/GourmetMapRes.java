@@ -2,82 +2,111 @@ package com.example.demo_gourmetmap.vo;
 
 import java.util.List;
 
-import com.example.demo_gourmetmap.entity.GourmetMap;
-import com.example.demo_gourmetmap.entity.NameFood;
+import com.example.demo_gourmetmap.entity.Store;
+import com.example.demo_gourmetmap.entity.Meal;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class GourmetMapRes {
+	
+    //店家名稱
+	private String storeName;
 
-	private String name;
+	//城市
+	private String storeCity;
 
-	private String city;
+	//店家評價
+	private Integer storeComment;
 
-	private Integer nameComment;
+	//店家
+	private Store store;
 
-	private NameFood nameFood;
+	//餐點
+	private Meal meal;
 
+	//訊息
 	private String message;
 
-	private GourmetMapRes reg;
+	//餐點名稱
+	private String mealName;
+ 
+	//餐點食物
+	private String mealFood;
 
-	private GourmetMap gourmetMap;
+	//價錢
+	private String mealPrice;
 
+	//餐點評價
+	private String mealComment;
+
+	//Res
 	private GourmetMapRes res;
 
-	private String string;
-
-	private List<GourmetMap> gourmetMapList;
-
+	//List 店家
+	private List<Store> storeList;
+	
+    //新呈現給使用者看的畫面
 	private List<GourmetMapForFrontEnd> gourmetMapForFrontEndList;
 
-	private List<NameFood> nameFoodList;
+	//List餐點
+	private List<Meal> mealList;
 
-//	private List<String> strList;
-
-	private List<GourmetMapForFrontEnd> gourmetMapForFrontEnd;
-
-	public GourmetMapRes(GourmetMapRes res, String message) {
-		this.res = res;
-		this.message = message;
-	}
-
-//	public GourmetMapRes(List<String> strList, String message) {
-//		this.strList = strList;
-//		this.message = message;
-//	}
 	public GourmetMapRes() {
 
 	}
 
-	public GourmetMapRes(GourmetMap gourmetMap) {
-		this.gourmetMap = gourmetMap;
-	}
-
-	public GourmetMapRes(NameFood nameFood, String message) {
+	public GourmetMapRes(Store store, String message) {
+		this.store = store;
 		this.message = message;
-		this.nameFood = nameFood;
 	}
 
 	public GourmetMapRes(String message) {
 		this.message = message;
 	}
 
-	public GourmetMapRes(GourmetMap gourmetMap, String string) {
-		this.gourmetMap = gourmetMap;
-		this.string = string;
+	public GourmetMapRes(GourmetMapRes res, String message) {
+		this.res = res;
+		this.message = message;
 	}
 
-	public GourmetMapRes(GourmetMapRes reg) {
-		this.reg = reg;
+	public String getStoreName() {
+		return storeName;
 	}
 
-	public NameFood getNameFood() {
-		return nameFood;
+	public void setStoreName(String storeName) {
+		this.storeName = storeName;
 	}
 
-	public void setNameFood(NameFood nameFood) {
-		this.nameFood = nameFood;
+	public String getStoreCity() {
+		return storeCity;
+	}
+
+	public void setStoreCity(String storeCity) {
+		this.storeCity = storeCity;
+	}
+
+	public Integer getStoreComment() {
+		return storeComment;
+	}
+
+	public void setStoreComment(Integer storeComment) {
+		this.storeComment = storeComment;
+	}
+
+	public Store getStore() {
+		return store;
+	}
+
+	public void setStore(Store store) {
+		this.store = store;
+	}
+
+	public Meal getMeal() {
+		return meal;
+	}
+
+	public void setMeal(Meal meal) {
+		this.meal = meal;
 	}
 
 	public String getMessage() {
@@ -88,68 +117,36 @@ public class GourmetMapRes {
 		this.message = message;
 	}
 
-	public GourmetMapRes getReg() {
-		return reg;
+	public String getMealName() {
+		return mealName;
 	}
 
-	public void setReg(GourmetMapRes reg) {
-		this.reg = reg;
+	public void setMealName(String mealName) {
+		this.mealName = mealName;
 	}
 
-	public GourmetMap getGourmetMap() {
-		return gourmetMap;
+	public String getMealFood() {
+		return mealFood;
 	}
 
-	public void setGourmetMap(GourmetMap gourmetMap) {
-		this.gourmetMap = gourmetMap;
+	public void setMealFood(String mealFood) {
+		this.mealFood = mealFood;
 	}
 
-	public String getString() {
-		return string;
+	public String getMealPrice() {
+		return mealPrice;
 	}
 
-	public void setString(String string) {
-		this.string = string;
+	public void setMealPrice(String mealPrice) {
+		this.mealPrice = mealPrice;
 	}
 
-//	public List<String> getStrList() {
-//		return strList;
-//	}
-//
-//	public void setStrList(List<String> strList) {
-//		this.strList = strList;
-//	}
-
-	public List<NameFood> getNameFoodList() {
-		return nameFoodList;
+	public String getMealComment() {
+		return mealComment;
 	}
 
-	public void setNameFoodList(List<NameFood> nameFoodList) {
-		this.nameFoodList = nameFoodList;
-	}
-
-	public List<GourmetMapForFrontEnd> getGourmetMapForFrontEndList() {
-		return gourmetMapForFrontEndList;
-	}
-
-	public void setGourmetMapForFrontEndList(List<GourmetMapForFrontEnd> gourmetMapForFrontEndList) {
-		this.gourmetMapForFrontEndList = gourmetMapForFrontEndList;
-	}
-
-	public List<GourmetMapForFrontEnd> getGourmetMapForFrontEnd() {
-		return gourmetMapForFrontEnd;
-	}
-
-	public void setGourmetMapForFrontEnd(List<GourmetMapForFrontEnd> gourmetMapForFrontEnd) {
-		this.gourmetMapForFrontEnd = gourmetMapForFrontEnd;
-	}
-
-	public List<GourmetMap> getGourmetMapList() {
-		return gourmetMapList;
-	}
-
-	public void setGourmetMapList(List<GourmetMap> gourmetMapList) {
-		this.gourmetMapList = gourmetMapList;
+	public void setMealComment(String mealComment) {
+		this.mealComment = mealComment;
 	}
 
 	public GourmetMapRes getRes() {
@@ -160,28 +157,28 @@ public class GourmetMapRes {
 		this.res = res;
 	}
 
-	public String getName() {
-		return name;
+	public List<Store> getStoreList() {
+		return storeList;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setStoreList(List<Store> storeList) {
+		this.storeList = storeList;
 	}
 
-	public String getCity() {
-		return city;
+	public List<GourmetMapForFrontEnd> getGourmetMapForFrontEndList() {
+		return gourmetMapForFrontEndList;
 	}
 
-	public void setCity(String city) {
-		this.city = city;
+	public void setGourmetMapForFrontEndList(List<GourmetMapForFrontEnd> gourmetMapForFrontEndList) {
+		this.gourmetMapForFrontEndList = gourmetMapForFrontEndList;
 	}
 
-	public Integer getNameComment() {
-		return nameComment;
+	public List<Meal> getMealList() {
+		return mealList;
 	}
 
-	public void setNameComment(Integer nameComment) {
-		this.nameComment = nameComment;
+	public void setMealList(List<Meal> mealList) {
+		this.mealList = mealList;
 	}
 
 }
