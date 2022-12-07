@@ -10,6 +10,7 @@ import javax.persistence.Table;
 @Table(name = "namefood")
 @IdClass(value = MealId.class)
 public class Meal {
+	
 	@Id
 	@Column(name = "name")
 	private String storeName;

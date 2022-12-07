@@ -15,6 +15,8 @@ public enum GourmetMapMsgCode {
 	STORE_COMMENNT_REQUIRED("400", "店家評價必填"),
 
 	STORE_COMMENNT_FAILURE("400", "店家評價不符合"),
+	
+	STORE_COMMENNT_NOT_EXISTED("403","店家評價不存在"),
 
 	FOOD_COMMENNT_FALLURE("400", "餐點評價不符合"),
 

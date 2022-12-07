@@ -37,7 +37,7 @@ public class GourmetMapServiceImpl implements GourmetMapService {
 			return new GourmetMapRes(GourmetMapMsgCode.NAME_EXISTED.getMessage());
 		}
 
-		Store store = new Store();
+		Store store = new Store();  
 
 		// 設置 "店名" ;
 		store.setStoreName(storeName);
@@ -241,7 +241,7 @@ public class GourmetMapServiceImpl implements GourmetMapService {
 		// 透過 "店家評價" 取得符合該條件的 店家 ;
 		List<Store> storeList = storeDao.findByStoreCommentGreaterThanEqualOrderByStoreCommentDesc(storeComment);
 		if (storeList.isEmpty()) {
-			return new GourmetMapRes(GourmetMapMsgCode.STORE_COMMENNT_REQUIRED.getMessage());
+			return new GourmetMapRes(GourmetMapMsgCode.STORE_COMMENNT_NOT_EXISTED.getMessage());
 		}
 
 		List<String> storeNameList = new ArrayList<>();
@@ -288,7 +288,7 @@ public class GourmetMapServiceImpl implements GourmetMapService {
 
 		// 判斷 店家列表 是否為空 ;
 		if (storeInNameComment.isEmpty()) {
-			return new GourmetMapRes(GourmetMapMsgCode.STORE_COMMENNT_REQUIRED.getMessage());
+			return new GourmetMapRes(GourmetMapMsgCode.STORE_COMMENNT_NOT_EXISTED.getMessage());
 		}
 
 		List<String> receiveStoreName = new ArrayList<>();
@@ -317,7 +317,7 @@ public class GourmetMapServiceImpl implements GourmetMapService {
 					gourmetMapForFrontEnd.setStoreName(store.getStoreName());
 					gourmetMapForFrontEnd.setFood(meal.getMealFood());
 					gourmetMapForFrontEnd.setPrice(meal.getMealPrice());
-					gourmetMapForFrontEnd.setStoreComment(meal.getMealComment());
+					gourmetMapForFrontEnd.setMealComment(meal.getMealComment());
 					resultList.add(gourmetMapForFrontEnd);
 				}
 			}

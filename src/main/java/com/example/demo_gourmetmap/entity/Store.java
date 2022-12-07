@@ -8,6 +8,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "gourmetmap")
 public class Store {
+	
 	@Id
 	@Column(name = "name")
 	private String storeName;
